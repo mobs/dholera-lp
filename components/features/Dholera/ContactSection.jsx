@@ -133,8 +133,7 @@ const ContactSection = ({ setOpenModal }) => {
         </div>
 
         {/* Office & Benefits Section */}
-        <div className="flex flex-wrap justify-center items-stretch gap-8 mb-16">
-          {/* Office Info */}
+        {/* <div className="flex flex-wrap justify-center items-stretch gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -156,7 +155,6 @@ const ContactSection = ({ setOpenModal }) => {
                 </div>
               </div>
 
-              {/* Working Hours */}
               <div className="mt-8 pt-8 border-t border-gray-100">
                 <div className="flex items-center space-x-3 mb-4">
                   <FaClock className="text-primary text-xl" />
@@ -174,7 +172,6 @@ const ContactSection = ({ setOpenModal }) => {
             </div>
           </motion.div>
 
-          {/* What You Get */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -202,7 +199,7 @@ const ContactSection = ({ setOpenModal }) => {
               </div>
             </div>
           </motion.div>
-        </div>
+        </div> */}
 
         {/* CTA Banner */}
         <motion.div

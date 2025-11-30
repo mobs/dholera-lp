@@ -244,21 +244,37 @@ const TPZonesSection = ({ setOpenModal }) => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <Card variant="elevated" className=" text-white overflow-hidden">
-            <div className=" bg-gradient-to-br from-secondary to-primary aspect-video flex flex-col items-center justify-center p-8 text-center" style={{ backgroundImage: `url("/dholera/map.webp")`, backgroundSize: 'cover', backgroundPosition: 'center', backdropFilter: 'blur(10px)' }}>
-              <FaMap className="text-6xl mb-6 opacity-80" />
-              <h3 className="text-3xl font-bold mb-4">Dholera SIR TP Zones – Complete Master Plan Map</h3>
-              <p className="text-lg mb-6 opacity-90">High-quality interactive TP zone map coming soon</p>
-              <Button 
-                variant="white" 
-                onClick={() => setOpenModal(true)}
-                className="rounded-full px-8 py-4 font-semibold shadow-lg"
-              >
-                <span className="flex items-center">
-                  <FaDownload className="mr-2" />
-                  Request TP Zone Information
-                </span>
-              </Button>
+          <Card variant="elevated" className="text-white overflow-hidden">
+            <div className="relative aspect-video flex flex-col items-center justify-center p-8 text-center">
+              {/* Blurred background image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ 
+                  backgroundImage: `url("/dholera/map.webp")`,
+                  filter: 'blur(8px)',
+                  transform: 'scale(1.1)'
+                }}
+              />
+              
+              {/* Dark overlay for better text visibility */}
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-primary/80" />
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <FaMap className="text-6xl mb-6 drop-shadow-lg" />
+                <h3 className="text-3xl font-bold mb-4 drop-shadow-md">Dholera SIR TP Zones – Complete Master Plan Map</h3>
+                <p className="text-lg mb-6 drop-shadow-md">High-quality interactive TP zone map coming soon</p>
+                <Button 
+                  variant="white" 
+                  onClick={() => setOpenModal(true)}
+                  className="rounded-full px-8 py-4 font-semibold shadow-lg hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <span className="flex items-center">
+                    <FaDownload className="mr-2" />
+                    Request TP Zone Information
+                  </span>
+                </Button>
+              </div>
             </div>
           </Card>
         </motion.div>

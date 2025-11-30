@@ -256,7 +256,7 @@ const WhyChoose4SFSection = ({ setOpenModal }) => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -315,7 +315,7 @@ const WhyChoose4SFSection = ({ setOpenModal }) => {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
